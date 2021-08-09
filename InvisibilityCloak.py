@@ -232,6 +232,9 @@ def canProceedWithObfuscation(theLine, theItem):
 	# random edge case issue (""" in the line)
 	elif "\"\"\"" in theLine:
 		return 0
+	# random edge case issue (\" in the line)
+	elif "\\\"" in theLine:
+		return 0
 	# otherwise, it is ok to proceed with string obfuscation
 	else:
 		return 1
